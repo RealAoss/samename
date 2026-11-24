@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "samename"
+version = "0.1.0"
+description = "Match East Slavic personal names (Ukrainian, Russian, Belarusian) across Cyrillic, Latin romanizations and languages. Zero dependencies."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = [
+  "names", "name-matching", "fuzzy-matching", "transliteration", "romanization",
+  "record-linkage", "deduplication", "entity-resolution", "phonetic",
+  "ukrainian", "russian", "belarusian", "cyrillic",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: Ukrainian",
+  "Natural Language :: Russian",
+  "Natural Language :: Belarusian",
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: Linguistic",
+]
+
+[project.urls]
+Homepage = "https://github.com/RealAoss/samename"
+
+[project.scripts]
+samename = "samename.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
